@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Memetakan permintaan API ke backend
       '/send-email': {
-        target: 'http://localhost:5000', // URL backend
+        target: 'https://chat-be-psi.vercel.app/', // URL backend
         changeOrigin: true,
       },
     },

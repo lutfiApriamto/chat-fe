@@ -26,7 +26,7 @@ const App = () => {
 
   const sendMail = () => {
       try {
-        axios.post('http://localhost:5000/send-email', {
+        axios.post('https://chat-be-psi.vercel.app/send-email', {
           email: 'cbkpali@gmail.com',
           subject: 'Notifikasi Akses Aplikasi',
           text: 'Proses pengiriman pesan telah dimulai melalui WhatsApp Blast.',
