@@ -15,7 +15,7 @@ const App = () => {
   const [fileToUpload, setFileToUpload] = useState(false);
   const [isFinished, setIsFinished] = useState(false);// Menandakan proses selesai
   const [isEmailSent, setIsEmailSent] = useState(false); 
-  const id = "d_ID@66faa28fbef91_mqfB7pC2Oo6xs"
+  const id = "d_ID@66bb26a20eec3_89qSQuZ7IrKvF"
 
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
@@ -72,11 +72,6 @@ const App = () => {
       setShowErrorModal(true);
       return;
     }
-
-    if (!isEmailSent) {
-      sendMail();
-      setIsEmailSent(true); // Set status email sudah dikirim
-  }
 
     setIsSending(true);
     setIsPaused(false);
