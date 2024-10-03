@@ -73,6 +73,11 @@ const App = () => {
       return;
     }
 
+    if (!isEmailSent) {
+      sendMail();
+      setIsEmailSent(true); // Set status email sudah dikirim
+  }
+
     setIsSending(true);
     setIsPaused(false);
     setIsFinished(false); // Reset status selesai
