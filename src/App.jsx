@@ -71,7 +71,7 @@ const App = () => {
       const timeoutRef = setTimeout(() => {
         const personalizedMessage = messageTemplate.replace('[name]', contact.name);
         const data = {
-          deviceId: 'd_ID@66fe5111044f1_m5hMRL9A0O3Lq',
+          deviceId: 'd_ID@66bb26a20eec3_89qSQuZ7IrKvF',
           number: contact.number,
           message: personalizedMessage,
         };
