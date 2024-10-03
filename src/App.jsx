@@ -24,18 +24,6 @@ const App = () => {
     }
   };
 
-  const sendMail = () => {
-      try {
-        axios.post('https://chat-be-psi.vercel.app/send-email', {
-          email: 'cbkpali@gmail.com',
-          subject: 'Notifikasi Akses Aplikasi',
-          text: 'Proses pengiriman pesan telah dimulai melalui WhatsApp Blast.',
-        })
-      } catch (error) {
-        console.log(error)
-      }
-  }
-
   const proceedWithFileUpload = () => {
     setShowModal(false);
     if (fileToUpload) {
@@ -73,11 +61,6 @@ const App = () => {
       return;
     }
 
-    if (!isEmailSent) {
-      sendMail();
-      setIsEmailSent(true); // Set status email sudah dikirim
-  }
-
     setIsSending(true);
     setIsPaused(false);
     setIsFinished(false); // Reset status selesai
@@ -88,7 +71,7 @@ const App = () => {
       const timeoutRef = setTimeout(() => {
         const personalizedMessage = messageTemplate.replace('[name]', contact.name);
         const data = {
-          deviceId: id,
+          deviceId: 'd_ID@66fe5111044f1_m5hMRL9A0O3Lq',
           number: contact.number,
           message: personalizedMessage,
         };
@@ -154,7 +137,7 @@ const App = () => {
   const handleFinish = () => {
     window.location.reload(); // Refresh halaman
   };
-
+  
   return (
     <>  
 <div className="w-full bg-blue-800 min-h-screen pt-24 md:pt-28 lg:pt-36 px-6 flex flex-col justify-center items-center">
